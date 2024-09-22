@@ -7,6 +7,9 @@
     .btn-main {
         @apply btn bg-primary text-deep-black font-semibold hover:bg-dark-primary;
     }
+    .btn-secondary {
+        @apply btn bg-transparent hover:bg-dark-primary hover:border-transparent hover:text-deep-black border-light-gray text-dark-gray
+    }
 }
 
 

@@ -9,7 +9,8 @@ module.exports = {
         "backgrond": "#F9F7F3",
         "deep-black": "#111111",
         "dark-gray": "#585858",
-        "light-gray": "#A0A0A0",
+        "medium-gray": "#A0A0A0",
+        "light-gray": "#B8B8B8",
         "off-white": "#F3F3F3"
       },
       fontFamily: {
