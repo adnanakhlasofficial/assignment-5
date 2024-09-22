@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .btn-main {
+        @apply btn bg-primary text-deep-black font-semibold hover:bg-dark-primary;
+    }
+}
+
+
+@layer utilities {
+    .title {
+        @apply text-xl font-bold text-deep-black;
+    }
+    .description {
+        @apply text-base font-light text-dark-gray
+    }
+    .stat{
+        @apply text-dark-gray font-medium;
+    }
+}
