@@ -10,6 +10,9 @@
     .btn-secondary {
         @apply btn bg-transparent hover:bg-dark-primary hover:border-transparent hover:text-deep-black border-light-gray text-dark-gray
     }
+    .input-main {
+        @apply placeholder:text-medium-gray text-dark-gray input input-bordered border-dim-gray w-full [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:outline-none
+    }
 }
 
 
@@ -20,7 +23,13 @@
     .description {
         @apply text-base font-light text-dark-gray
     }
+    .stat-space {
+        @apply flex items-center justify-center gap-1;
+    }
     .stat{
         @apply text-dark-gray font-medium;
+    }
+    .stat-donate {
+        @apply text-base text-dark-gray;
     }
 }
