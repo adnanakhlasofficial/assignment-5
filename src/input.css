@@ -13,6 +13,9 @@
     .input-main {
         @apply placeholder:text-medium-gray text-dark-gray input input-bordered border-dim-gray w-full [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:outline-none
     }
+    .box {
+        @apply border border-dim-gray rounded-lg p-8 max-w-6xl mx-auto;
+    }
 }
 
 

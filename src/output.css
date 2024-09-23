@@ -1890,6 +1890,17 @@ html {
           appearance: none;
 }
 
+.box {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(231 231 231 / var(--tw-border-opacity));
+  padding: 2rem;
+}
+
 .sticky {
   position: sticky;
 }
@@ -1907,8 +1918,16 @@ html {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-full {
   height: 100%;
+}
+
+.min-h-48 {
+  min-height: 12rem;
 }
 
 .w-full {
