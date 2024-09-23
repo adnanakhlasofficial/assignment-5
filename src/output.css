@@ -2249,16 +2249,12 @@ details.collapse summary::-webkit-details-marker {
   max-width: 6rem;
 }
 
-.max-w-lg {
-  max-width: 32rem;
-}
-
-.max-w-6xl {
-  max-width: 72rem;
-}
-
 .max-w-4xl {
   max-width: 56rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .transform {
@@ -2347,14 +2343,14 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(249 247 243 / var(--tw-bg-opacity));
 }
 
-.bg-base-200 {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
-}
-
 .bg-off-white {
   --tw-bg-opacity: 1;
   background-color: rgb(243 243 243 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .p-6 {
