@@ -2289,6 +2289,15 @@ details.collapse summary::-webkit-details-marker {
   width: 100%;
 }
 
+.w-auto {
+  width: auto;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .max-w-24 {
   max-width: 6rem;
 }
