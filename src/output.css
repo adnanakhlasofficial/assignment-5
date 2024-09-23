@@ -2592,10 +2592,6 @@ details.collapse summary::-webkit-details-marker {
   width: 100%;
 }
 
-.w-auto {
-  width: auto;
-}
-
 .w-max {
   width: -moz-max-content;
   width: max-content;
@@ -2718,11 +2714,6 @@ details.collapse summary::-webkit-details-marker {
   padding-bottom: 0.75rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .text-justify {
   text-align: justify;
 }
@@ -2731,24 +2722,9 @@ details.collapse summary::-webkit-details-marker {
   font-family: Lexend;
 }
 
-.\!text-xl {
-  font-size: 1.25rem !important;
-  line-height: 1.75rem !important;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.\!text-3xl {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
 }
 
 .\!text-5xl {
@@ -2756,14 +2732,24 @@ details.collapse summary::-webkit-details-marker {
   line-height: 1 !important;
 }
 
-.\!text-3xl {
-  font-size: 1.875rem !important;
-  line-height: 2.25rem !important;
-}
-
 .\!text-lg {
   font-size: 1.125rem !important;
   line-height: 1.75rem !important;
+}
+
+.\!text-xl {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .\!font-semibold {
@@ -2774,8 +2760,9 @@ details.collapse summary::-webkit-details-marker {
   font-weight: 500;
 }
 
-.font-bold {
-  font-weight: 700;
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .title {

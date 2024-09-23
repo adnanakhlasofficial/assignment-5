@@ -22,3 +22,19 @@ document.getElementById("noakhali-btn").addEventListener("click", ()=> {
     document.getElementById("noakhali-input").value = "";
     
 });
+
+document.getElementById("noakhali-input").addEventListener("input", () => {
+    const value =  getInputNumById("noakhali-input");
+    if (isNaN(value) ||  value < 0 || value > money) {
+        const errorMsg = document.getElementById("noakhali-error");
+        errorMsg.classList.remove("hidden");
+        const button = document.getElementById("noakhali-btn");
+        button.setAttribute("disabled", true);
+    } else {
+        const errorMsg = document.getElementById("noakhali-error");
+        errorMsg.classList.add("hidden");
+        const button = document.getElementById("noakhali-btn");
+        button.removeAttribute("disabled");
+    }
+    
+})
