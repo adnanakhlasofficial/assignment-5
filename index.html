@@ -249,14 +249,14 @@
         </nav>
         <!-- Buttons -->
         <div class="stat-space !gap-4">
-            <button class="btn-main">Donation</button>
-            <button class="btn-secondary">History</button>
+            <button id="donation-tab" class="btn-main">Donation</button>
+            <button id="history-tab" class="btn-secondary">History</button>
         </div>
     </header>
     <!-- Main -->
     <main class="container mx-auto space-y-8">
         <!-- Box Container -->
-        <div class="space-y-8">
+        <div id="donation-container" class="space-y-8">
             <!-- Box 1 -->
             <div class="box flex flex-col lg:flex-row gap-8">
                 <!-- Image -->
@@ -345,7 +345,7 @@
                         <span>BDT</span>
                     </div>
                     <div class="space-y-4">
-                        <h2 class="title">Donate for Flood at Noakhali, Bangladesh</h2>
+                        <h2 id="noakhali-title" class="title">Donate for Flood at Noakhali, Bangladesh</h2>
                         <p class="description text-justify">The recent floods in Noakhali have caused significant damage
                             to
                             homes infrastructure. Your donation will help provide essential supplies and to those
@@ -620,12 +620,12 @@
         </div>
 
         <!-- History Container -->
-        <div class="space-y-8 hidden">
+        <div id="history-container" class="space-y-8 hidden">
             <!-- Demo -->
-            <div class="box space-y-4">
+            <!-- <div class="box space-y-4">
                 <h2 class="title">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
                 <p class="description">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-            </div>
+            </div> -->
         </div>
     </main>
     <!-- Footer -->
