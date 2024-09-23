@@ -2265,24 +2265,16 @@ details.collapse summary::-webkit-details-marker {
   display: none;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-56 {
-  height: 14rem;
-}
-
 .h-32 {
   height: 8rem;
 }
 
-.w-full {
-  width: 100%;
+.h-full {
+  height: 100%;
 }
 
-.w-56 {
-  width: 14rem;
+.w-full {
+  width: 100%;
 }
 
 .max-w-24 {
