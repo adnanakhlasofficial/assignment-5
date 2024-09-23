@@ -15,7 +15,7 @@ document.getElementById("noakhali-btn").addEventListener("click", ()=> {
     const inputValue = getInputNumById("noakhali-input");
     money -= inputValue;
     
-    totalDonate +=inputValue;
+    totalDonate += inputValue;
     document.getElementById("total-donate").innerHTML = totalDonate;
 
     document.getElementById("money").innerText = money;
