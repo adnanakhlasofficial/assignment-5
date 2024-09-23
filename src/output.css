@@ -2605,10 +2605,6 @@ details.collapse summary::-webkit-details-marker {
   width: max-content;
 }
 
-.max-w-24 {
-  max-width: 6rem;
-}
-
 .max-w-4xl {
   max-width: 56rem;
 }
