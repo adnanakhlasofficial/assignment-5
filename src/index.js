@@ -35,6 +35,11 @@ let totalDonate = getElementNumById("total-donate");
 
 document.getElementById("noakhali-btn").addEventListener("click", () => {
     const inputValue = getInputNumById("noakhali-input");
+    
+    if (isNaN(inputValue)) {
+        alert("Please Enter amount in input field");
+        return
+    } 
     money -= inputValue;
 
     totalDonate += inputValue;
