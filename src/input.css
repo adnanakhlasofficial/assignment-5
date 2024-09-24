@@ -20,6 +20,9 @@
 
 
 @layer utilities {
+    .wrapper {
+        @apply container mx-auto lg:w-3/4 w-11/12;
+    }
     .title {
         @apply text-xl font-bold text-deep-black;
     }
