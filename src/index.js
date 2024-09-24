@@ -31,16 +31,16 @@ document.getElementById("quota-input").addEventListener("input", () => {
 
 // History Tab Shift
 document.getElementById("history-tab").addEventListener("click", () => {
-    btnToggle("history-tab", "donation-tab")
-    document.getElementById("history-container").classList.remove("hidden");
-    document.getElementById("donation-container").classList.add("hidden");
+    btnToggle("history-tab", "donation-tab", "history-container", "donation-container");
 });
 
 // Donation Tab Shift
 document.getElementById("donation-tab").addEventListener("click", () => {
-    btnToggle("donation-tab", "history-tab")
-    document.getElementById("donation-container").classList.remove("hidden");
-    document.getElementById("history-container").classList.add("hidden");
+    btnToggle("donation-tab", "history-tab", "donation-container", "history-container");
 });
 
 
+
+document.body.addEventListener("contextmenu", (e)=> {
+    e.preventDefault();
+})
