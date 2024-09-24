@@ -39,8 +39,10 @@ document.getElementById("donation-tab").addEventListener("click", () => {
     btnToggle("donation-tab", "history-tab", "donation-container", "history-container");
 });
 
-
-
-document.body.addEventListener("contextmenu", (e)=> {
+// Context Menu Disabled
+document.body.addEventListener("contextmenu", (e) => {
     e.preventDefault();
-})
+});
+
+
+window.onscroll = function () { scrollFunction(); };

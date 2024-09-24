@@ -62,3 +62,14 @@ function calculateDonation(id, money, donate, title) {
     }
     count++
 };
+
+// Navbar Scroll function
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("header").classList.add("sticky", "top-0", "backdrop-blur-xl", "bg-white/30");
+        document.getElementById("navbar").classList.remove("bg-backgrond")
+    } else {
+        document.getElementById("header").classList.remove("sticky", "top-0", "backdrop-blur-xl", "bg-white/30");
+        document.getElementById("navbar").classList.add("bg-backgrond")
+    }
+}
