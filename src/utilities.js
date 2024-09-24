@@ -29,6 +29,7 @@ function btnToggle(mainBtn, shiftBtn) {
 }
 
 // Calculate Function
+let count = 1;
 function calculateDonation(id, money, donate, title) {
     let balance = getElementNumById(money);
     let donateBalance = getElementNumById(donate)
@@ -49,11 +50,11 @@ function calculateDonation(id, money, donate, title) {
         const createEl = document.createElement("div");
         createEl.className = "box space-y-4";
         createEl.innerHTML = `
+        <p class="title text-center">${count++}</p>
         <h2 class="title">${inputValue} Taka is Donated for ${document.getElementById(title).innerHTML}</h2> 
         <p class="description">Date : ${new Date()}</p>
         `
         
         document.getElementById("history").prepend(createEl);
     }
-    
-}
+};
