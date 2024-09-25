@@ -35,7 +35,7 @@ let count = 1;
 function calculateDonation(id, money, donate, title) {
     let balance = getElementNumById(money);
     let donateBalance = getElementNumById(donate)
-    
+
     const inputValue = getInputNumById(id);
     if (isNaN(inputValue)) {
         document.getElementById("my_modal_1").close();
@@ -52,11 +52,24 @@ function calculateDonation(id, money, donate, title) {
         const createEl = document.createElement("div");
         createEl.className = "box space-y-4";
         createEl.innerHTML = `
-        <p class="title text-center"><span id="count">${count}</span><button id="cross">X</button></p> 
+        <p class="title text-center"><span class="count">${count}</span><button class="cross hidden">X</button></p> 
         <h2 class="title">${inputValue} Taka is Donated for ${document.getElementById(title).innerHTML}</h2> 
         <p class="description">Date : ${new Date()}</p>
         `
-        
+        createEl.querySelector(".cross").addEventListener("click", () => {
+            createEl.remove();
+        });
+
+        createEl.addEventListener("mouseenter", (e) => {
+            createEl.querySelector(".count").classList.add("hidden");
+            createEl.querySelector(".cross").classList.remove("hidden");
+
+        });
+        createEl.addEventListener("mouseleave", (e) => {
+            createEl.querySelector(".count").classList.remove("hidden");
+            createEl.querySelector(".cross").classList.add("hidden");
+
+        });
         document.getElementById("history").prepend(createEl);
     }
     count++
