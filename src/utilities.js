@@ -13,10 +13,8 @@ function errorAlert(id, errorText, btn) {
     const money = getElementNumById("money")
     if (isNaN(value) || value <= 0 || value > money) {
         document.getElementById(errorText).classList.remove("hidden");
-        document.getElementById(btn).setAttribute("disabled", true);
     } else {
         document.getElementById(errorText).classList.add("hidden");
-        document.getElementById(btn).removeAttribute("disabled");
     }
 };
 
@@ -31,15 +29,14 @@ function btnToggle(mainBtn, shiftBtn, hide, show) {
 }
 
 // Calculate Function
-let count = 1;
 function calculateDonation(id, money, donate, title) {
     let balance = getElementNumById(money);
     let donateBalance = getElementNumById(donate)
     
     const inputValue = getInputNumById(id);
-    if (isNaN(inputValue)) {
+    if (isNaN(inputValue) || inputValue <= 0 || inputValue > money) {
         document.getElementById("my_modal_1").close();
-        alert("Please enter a Valid Amount");
+        alert("Invalid Donation Amount");
         return
     } else {
         balance -= inputValue;
@@ -50,17 +47,14 @@ function calculateDonation(id, money, donate, title) {
         document.getElementById(id).value = "";
 
         const createEl = document.createElement("div");
-        createEl.className = "box space-y-4 relative";
-        createEl.setAttribute("id", `transaction${count}`)
+        createEl.className = "box space-y-4";
         createEl.innerHTML = `
-        <p class="title text-center">${count}</p> 
         <h2 class="title">${inputValue} Taka is Donated for ${document.getElementById(title).innerHTML}</h2> 
         <p class="description">Date : ${new Date()}</p>
         `
         
         document.getElementById("history").prepend(createEl);
     }
-    count++
 };
 
 // Navbar Scroll function

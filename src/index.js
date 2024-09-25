@@ -28,7 +28,6 @@ document.getElementById("quota-input").addEventListener("input", () => {
     errorAlert("quota-input", "quota-error", "quota-btn", "money");
 });
 
-
 // History Tab Shift
 document.getElementById("history-tab").addEventListener("click", () => {
     btnToggle("history-tab", "donation-tab", "history-container", "donation-container");
@@ -39,10 +38,7 @@ document.getElementById("donation-tab").addEventListener("click", () => {
     btnToggle("donation-tab", "history-tab", "donation-container", "history-container");
 });
 
-// Context Menu Disabled
-document.body.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-});
-
-
-window.onscroll = function () { scrollFunction(); };
+// Navbar Scroll Effect Function
+window.onscroll = function () { 
+    scrollFunction(); 
+};
