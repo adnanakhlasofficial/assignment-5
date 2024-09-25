@@ -50,10 +50,9 @@ function calculateDonation(id, money, donate, title) {
         document.getElementById(id).value = "";
 
         const createEl = document.createElement("div");
-        createEl.className = "box space-y-4 relative";
-        createEl.setAttribute("id", `transaction${count}`)
+        createEl.className = "box space-y-4";
         createEl.innerHTML = `
-        <p class="title text-center">${count}</p> 
+        <p class="title text-center"><span id="count">${count}</span><button id="cross">X</button></p> 
         <h2 class="title">${inputValue} Taka is Donated for ${document.getElementById(title).innerHTML}</h2> 
         <p class="description">Date : ${new Date()}</p>
         `

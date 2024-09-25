@@ -44,5 +44,71 @@ document.body.addEventListener("contextmenu", (e) => {
     e.preventDefault();
 });
 
+// Window scroll Effect for navbar
+window.onscroll = () => { 
+    scrollFunction(); 
+};
 
-window.onscroll = function () { scrollFunction(); };
+
+// document.getElementById("cross").addEventListener("click", (e) => {
+//     // document.getElementById("single-history").remove();
+//     const target = e.target.parentElement;
+//     console.log(target);
+    
+// });
+
+
+document.getElementById("history").addEventListener("mouseover", (e) => {
+    if (e.target.matches(".box")) {
+        e.target.children[0].children[0].classList.add("hidden")
+        e.target.children[0].children[1].classList.remove("hidden")
+    } 
+});
+
+
+
+ document.getElementById("history").addEventListener("mouseleave", (e) => {
+    console.log(e.target.children[0].children[0].children[0]);
+    e.target.children[0].children[0].children[0].classList.remove("hidden")
+    e.target.children[0].children[0].children[1].classList.add("hidden")
+});
+
+
+
+
+
+
+
+
+
+
+// for (const singleHistory of history) {
+
+//     singleHistory.children[0].children[1].addEventListener("click", (e) => {
+//         const target = e.target.parentElement.parentElement.remove();
+//     });
+
+//     singleHistory.addEventListener("mouseover", () => {
+//         singleHistory.children[0].children[0].classList.add("hidden")
+//         singleHistory.children[0].children[1].classList.remove("hidden")
+//     });
+
+//     singleHistory.addEventListener("mouseleave", () => {
+//         singleHistory.children[0].children[0].classList.remove("hidden")
+//         singleHistory.children[0].children[1].classList.add("hidden")
+//     });
+    
+// };
+
+
+/**
+document.getElementById("single-history").addEventListener("mouseover", () => {
+    document.getElementById("count").classList.add("hidden");
+    document.getElementById("cross").classList.remove("hidden");
+});
+
+document.getElementById("single-history").addEventListener("mouseleave", () => {
+    document.getElementById("count").classList.remove("hidden");
+    document.getElementById("cross").classList.add("hidden");
+});
+ */

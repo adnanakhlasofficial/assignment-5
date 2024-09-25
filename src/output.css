@@ -2354,6 +2354,10 @@ details.collapse summary::-webkit-details-marker {
   visibility: collapse;
 }
 
+.relative {
+  position: relative;
+}
+
 .sticky {
   position: sticky;
 }
