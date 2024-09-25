@@ -65,7 +65,7 @@ function calculateDonation(id, money, donate, title) {
 
 // Navbar Scroll function
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.documentElement.scrollTop > 0) {
         document.getElementById("header").classList.add("sticky", "top-0", "backdrop-blur-xl", "bg-white/30");
         document.getElementById("navbar").classList.remove("bg-backgrond")
     } else {
