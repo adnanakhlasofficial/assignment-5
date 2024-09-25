@@ -31,10 +31,12 @@ function btnToggle(mainBtn, shiftBtn, hide, show) {
 }
 
 // Calculate Function
-let count = 1;
 function calculateDonation(id, money, donate, title) {
     let balance = getElementNumById(money);
     let donateBalance = getElementNumById(donate)
+    const history = document.getElementById("history").children;
+    console.log(history.length);
+    
 
     const inputValue = getInputNumById(id);
     if (isNaN(inputValue)) {
@@ -52,12 +54,20 @@ function calculateDonation(id, money, donate, title) {
         const createEl = document.createElement("div");
         createEl.className = "box space-y-4";
         createEl.innerHTML = `
-        <p class="title text-center"><span class="count">${count}</span><button class="cross hidden">X</button></p> 
+        <p class="title text-center"><span class="count">${history.length + 1}</span><button class="cross hidden">X</button></p> 
         <h2 class="title">${inputValue} Taka is Donated for ${document.getElementById(title).innerHTML}</h2> 
         <p class="description">Date : ${new Date()}</p>
         `
         createEl.querySelector(".cross").addEventListener("click", () => {
             createEl.remove();
+            let all = document.querySelectorAll(".count");
+            let i = all.length;
+            for (const item of all) {
+                console.log(item.innerText);
+                item.innerText = i;
+                i--;
+            }
+            
         });
 
         createEl.addEventListener("mouseenter", (e) => {
@@ -65,14 +75,16 @@ function calculateDonation(id, money, donate, title) {
             createEl.querySelector(".cross").classList.remove("hidden");
 
         });
+        
         createEl.addEventListener("mouseleave", (e) => {
             createEl.querySelector(".count").classList.remove("hidden");
             createEl.querySelector(".cross").classList.add("hidden");
 
         });
         document.getElementById("history").prepend(createEl);
+
     }
-    count++
+
 };
 
 // Navbar Scroll function
