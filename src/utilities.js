@@ -34,7 +34,7 @@ function calculateDonation(id, money, donate, title) {
     let donateBalance = getElementNumById(donate)
     
     const inputValue = getInputNumById(id);
-    if (isNaN(inputValue) || inputValue <= 0 || inputValue > money) {
+    if (isNaN(inputValue) || inputValue <= 0 || inputValue > balance) {
         document.getElementById("my_modal_1").close();
         alert("Invalid Donation Amount");
         return
